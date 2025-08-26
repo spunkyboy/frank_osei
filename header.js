@@ -1,27 +1,49 @@
 function toggleDropdown(){
-    document.getElementById("myDropdown").classList.toggle("show");
+    const dropdown = document.getElementById("myDropdown");
+    if (dropdown) dropdown.classList.toggle("show");
 }
 
 function selectResponse(response) {
-    document.getElementById("selectedResponse").innerText = response;
+    const el = document.getElementById("selectedResponse");
+    if (el) el.innerText = response;
     closeDropdown();
 }
+
 function selectAbout(about) {
-    document.getElementById("about").innerText = about;
+    const el = document.getElementById("about");
+    if (el) el.innerText = about;
     closeDropdown();
 }
+
 function selectHome(home) {
-    document.getElementById("home").innerText = home.toUpperCase();
+    const el = document.getElementById("home");
+    if (el) el.innerText = home.toUpperCase();
     closeDropdown();
 }
 
 function closeDropdown() {
-    document.getElementById("myDropdown").classList.remove("show");
+    const dropdown = document.getElementById("myDropdown");
+    if (dropdown) dropdown.classList.remove("show");
 }
-function myPortfolios() {
-    alert("still in progress...");
-   }
 
+function myPortfolios() {
+    const choice = prompt("Which portfolio would you like to visit?\n1. Frankie Cafe\n2. Quiz");
+
+    if (!choice) {
+        alert("No input provided.");
+        return;
+    }
+
+    const normalized = choice.trim().toLowerCase();
+
+    if (normalized === "1" || normalized === "frankie cafe") {
+        window.open("https://spunkyboy.github.io/frankie_cafe/", "_blank");
+    } else if (normalized === "2" || normalized === "quiz") {
+        window.open("https://spunkyboy.github.io/Quiz4u/", "_blank");
+    } else {
+        alert("Invalid choice. Please enter 1, 2, frank cafe, or quiz.");
+    }
+}
 
 if (typeof window !== 'undefined') {
     window.onclick = function(event) {
@@ -49,17 +71,21 @@ image.onclick = function() {
 
 if (typeof document !== 'undefined') {
     const element = document.getElementById('button_2');
-function updateContent() {
-    if (window.matchMedia("(max-width: 724px)").matches) {
-        element.innerHTML = "&#x2630;";
-
-    } else {
-        element.innerHTML = '<span style="font-weight:bold;">FRANK</span>';
+    
+    if (element) {
+        element.style.cursor = 'pointer'; // 👈 Cursor effect
     }
+
+    function updateContent() {
+        if (!element) return;
+
+        if (window.matchMedia("(max-width: 734px)").matches) {
+            element.innerHTML = "&#x2630;";
+        } else {
+            element.innerHTML = '<span style="font-weight:bold;">FRANK</span>';
+        }
+    }
+
+    updateContent();
+    window.addEventListener('resize', updateContent);
 }
-
-updateContent();
-window.addEventListener('resize', updateContent);
-
-}
-

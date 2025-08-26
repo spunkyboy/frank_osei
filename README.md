@@ -13,6 +13,7 @@ HMTL and CSS are tested with w3c validator and it meets the standard and also me
 - HTML5
 - CSS3
 - JavaScript
+- Web3forms
 
 ## 📁 Features
 - ✅ Feature 1 (Responsive design)

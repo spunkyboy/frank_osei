@@ -41,7 +41,7 @@ function myPortfolios() {
     } else if (normalized === "2" || normalized === "quiz") {
         window.open("https://spunkyboy.github.io/Quiz4u/", "_blank");
     } else {
-        alert("Invalid choice. Please enter 1, 2, frank cafe, or quiz.");
+        alert("Invalid choice. Please enter 1, 2, frankie cafe, or quiz.");
     }
 }
 

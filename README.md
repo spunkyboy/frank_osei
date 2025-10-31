@@ -1,4 +1,4 @@
-#Personal Portfolio Website
+# Personal Portfolio Website
 
 This is my personal portfolio website, designed and developed to showcase my skills, interests, and projects as a Frontend Engineer. It serves as an introduction to who I am, the technologies I’ve learned, and the projects I’m currently developing.
 

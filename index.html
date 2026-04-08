@@ -1,58 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Frank osei personal website , frontend engineer in leeds with developed skills in photoshop, html, css, JavaScript, react and redux ">
     <title>Frank Osei</title>
-    <link rel="icon" type="image/x-icon" href="./images_folder/logo.jpg">
-    <link rel="stylesheet" href="./styles.css"/>
-    <link rel="stylesheet" href="./reset.css"/>
+    <link rel="icon" type="image/x-icon" href="./images_folder/logo.png">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./reset.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/5d07f027c2.js" crossorigin="anonymous"></script> 
+
   </head>
   <body>
     <div class="wrapper">
-    <header>
-        <div class="navbar">
-          <div class="header-branding">
-            <a href="index.html"><i class="fa fa-bars"></i></a>
-          </div>
-          <nav class="navlinks">
-            <a href="about.html">About me</a>
-            <a href="#">Portfolios</a>
-            <a href="contact.html">Contact</a>
-          </nav>
-        </div>
-    </header> 
       <main> 
-          <section>
-            <div class="home-content-flex">
-            <div>
-                <figure>
-                  <img src="./images_folder/frank_image.jpg" alt="Frank Image" class="frank-image-home" >
-                  <figcaption>Skilled with Vision and Passion</figcaption>
-                </figure>
-              </div>
-            <div class="home-me-text-container">
-              <h1>HEY!, I'M FRANK OSEI</h1>
-              <p>
-                A Result-Oriented Web Developer building and managing Websites and Web Applications that leads to the success of the overall product.
-              </p>
-                <p>
-                <a href="./images_folder/frankoseiCV.pdf" class="download" target="_blank" >Download CV</a>
-               </p>
+       <header>
+
+        <div class="dropdown">
+          <div class="button_logo">
+            <button onclick="toggleDropdown()" id="button_2"></button>
+            <h1 id="logo">frank</h1>
+          </div>
+            <div id="myDropdown" class="dropdown-content">
+              <div>
+                <a href="#top_id" onclick="selectHome('frank osei')">Welcome</a>
+                <a href="#about_me_id" onclick="selectAbout('Read Me')">About Me</a>
+                <a href="#" onclick="myPortfolios()">Portfolios</a>
+                <a href="#contact_id" onclick="selectResponse('Get Intouch')">Contact</a>
               </div>
             </div>
-          </section>
+        </div>
+       </header>
+           <section  id="top_id">
+            <div class="home-content-grid">
+            <div class="home_bg_image header_text">
+              <p>frank osei <span>Software <br>engineer</span></p>
+            </div>
+            <div class="home-me-text-container"  >
+              <h2 id="home">HEY!, I'M FRANK OSEI</h2>
+              <p>
+                A result-driven web developer building and managing Websites and web applications that leads to the success of the overall product.
+              </p>
+                <div class="download">
+                 <a href="./images_folder/FrankOsei-2.pdf" target="_blank" >Download CV</a>
+                </div>
+              </div>
+            </div>
+          </section >
           <h2 class="sub-head-skills">
             Programmes
           </h2>
      <div class="applications">
-       <ul class="skills">
+       <ul class="skills-items">
           <li>
             <span class="category"><i class="fa-brands fa-html5"></i></span>
             <span class="icon-name">HTML</span>
@@ -83,38 +86,106 @@
           </li>
           </ul>
       </div>
+
+      <section id="about_me_id">
+
+        <div class="about-me-container">
+          <div class="about_image">
+            <figure>
+              <img src="./images_folder/frank_image.webp" alt="personal image" class="frank-image-about" id="personalImage" >
+              <img src="./images_folder/frank_image.webp" alt="personal image" class="frank-image-large-screen">
+
+              <figcaption>Skilled with Vision and Passion</figcaption>
+            </figure>
+          </div>
+          <div class="about_text">
+              <h3 class="about_h3" id="about">About me</h3>
+              <p>
+                Hi there!. I'm Frank, frontend engineer based in Leeds that loves to code and build products with a delightful user experience.
+                I'm currently working in NHS and i'm looking forward to new opportunities.
+              </p>
+              <p>
+                I love creating web applications and websites. Programmes that make me excited are JavaScript, Photoshop, CSS & HTML, Git , Github, React & Redux.
+              </p>
+              <p>
+                Outside of work, I love football games and travelling with my family.
+              </p>
+            </div>
+            </div>
+      </section>
+      <section class="forms_grid" id="contact_id">
+        <div class="contact-container">
+            <h4 id="selectedResponse">Get in touch</h4>
+        </div>
+         <form action="https://api.web3forms.com/submit" method="POST" autocomplete="off" class="contact-left">
+            <input type="hidden" name="access_key" value="7a073772-011f-4fe5-acb0-c3f11b742aba">
+            <input type="text" name="name" placeholder="Name" class="contact-input">
+            <input type="email" name="email" placeholder="example@hotmail.com" class="contact-input" required>
+            <textarea name="message" placeholder="Your Comments" class="contact-input" required></textarea>
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+            <button type="submit" class="contact-submit">Submit Form</button>
+        </form>
+      </section>
 </main>
-  <footer>
+  <footer class="foot_items">
     <div>
-    <ul class="footer-list-center">
-      <li>
-       UI/UX DESIGN
-       </li>
-       <li>
-        WEB DEVELOPMENT
-       </li>
-       <li>
-        SOCIAL MEDIA DESIGN
-       </li>
-       <li>
-        WEB OPTIMIZATION
-       </li>
-    </ul>
+      <ul class="footer-list-center">
+        <li>
+          ui/ux design
+        </li>
+        <li>
+           web development
+        </li>
+        <li>
+          social  media design
+        </li>
+        <li>
+           web optimization
+        </li>
+        <li>
+          Testing and Debugging
+        </li>
+        </ul>
   </div>
     <div class="home-contact-text">
-      <ul class="home-contact-icons">
-         <li>
-            <a href="https://www.facebook.com/profile.php?id=100005378898543"><span class="category"><i class="fa-brands fa-facebook" id="facebook"></i></span></a>
-         </li>
+        <ul class="home-contact-icons">
           <li>
-           <a href="mailto:frankoseikwabena@hotmail.com"><span class="category"><i class="fa-regular fa-message" id="message"></i></span></a>
+              <a href="https://www.facebook.com/profile.php?id=100005378898543"><span class="category"><i class="fa-brands fa-facebook" id="facebook"></i></span></a>
           </li>
-         <li>
-           <a href="http://linkedin.com/in/frank-osei-619373249"><span class="category"><i class="fa-brands fa-linkedin" id="linkedin"></i></span></a>
-         </li>
-       </ul>
+            <li>
+            <a href="mailto:frankoseikwabena@hotmail.com"><span class="category"><i class="fa-regular fa-message" id="message"></i></span></a>
+            </li>
+          <li>
+            <a href="http://linkedin.com/in/frank-osei-619373249"><span class="category"><i class="fa-brands fa-linkedin" id="linkedin"></i></span></a>
+          </li>
+          </ul>
+     </div>
+     <div class="foot_nav">
+      <a href="#top_id">Welcome</a>
+      <a href="#about_me_id">about me</a>
+      <a href="#">Portfolios</a>
+      <a href="#contact_id">contact</a>
      </div>
   </footer>
+
+  <div id="portfolioModal" class="modal">
+    <div class="modal-content">
+      <span id="closeModal">&times;</span>
+      <h3>Select Portfolio</h3>
+  
+      <button data-link="https://spunkyboy.github.io/spunkyCafe/index.html">
+        Frankie Cafe
+      </button>
+  
+      <button data-link="https://quiz4all-ygm1.onrender.com/">
+        Quiz App
+      </button>
+    </div>
+  </div>
+
 </div>
+
+
+<script src="header.js" defer></script>
   </body>
 </html>

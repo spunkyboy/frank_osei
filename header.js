@@ -4,20 +4,26 @@ function toggleDropdown(){
 }
 
 function selectResponse(response) {
+
     const elementRes = document.getElementById("selectedResponse");
     if (elementRes) elementRes.innerText = response;
+
     closeDropdown();
 }
 
 function selectAbout(about) {
+
     const elementAbout = document.getElementById("about");
     if (elementAbout) elementAbout.innerText = about;
+
     closeDropdown();
 }
 
 function selectHome(home) {
+
     const elementHome = document.getElementById("home");
     if (elementHome) elementHome.innerText = home.toUpperCase();
+
     closeDropdown();
 }
 
@@ -27,6 +33,8 @@ function closeDropdown() {
 }
 
 
+
+
 if (typeof window !== 'undefined') {
     window.onclick = function(event) {
         if (!event.target.matches('#button_2')) {
@@ -34,6 +42,8 @@ if (typeof window !== 'undefined') {
         }
     }
 }
+
+
 
 
 if (typeof document !== 'undefined') {
@@ -56,7 +66,9 @@ if (typeof document !== 'undefined') {
     const element = document.getElementById('button_2');
     
     if (element) {
+
         element.style.cursor = 'pointer'; 
+
     }
 
     function updateContent() {
@@ -72,6 +84,7 @@ if (typeof document !== 'undefined') {
     updateContent();
     window.addEventListener('resize', updateContent);
 }
+
 
 const modal = document.getElementById("portfolioModal");
 const closeBtn = document.getElementById("closeModal");
@@ -102,3 +115,4 @@ window.addEventListener("click", (e) => {
         modal.style.display = "none";
     }
 });
+

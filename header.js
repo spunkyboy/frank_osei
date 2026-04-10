@@ -90,7 +90,7 @@ const modal = document.getElementById("portfolioModal");
 const closeBtn = document.getElementById("closeModal");
 
 function myPortfolios() {
-    modal.style.display = "block";
+    modal.style.display = "flex";
 
     // optional: close dropdown when opening modal
     closeDropdown();

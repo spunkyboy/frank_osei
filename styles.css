@@ -12,48 +12,46 @@ html{
  
   
   .modal {
-    display: none;
-    position: fixed;       
-    top: 50%;             
-    left: 50%;
-    transform: translate(-50%, -50%);  
+    display: none; /* hidden by default */
+    position: fixed;
 
-    width: 90%;
-    max-width: 25rem;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   
-    background-color: white;
-    border-radius: 0.5rem;
-    box-shadow: 0 0.25rem 0.938rem rgba(0,0,0,0.2);
-    z-index: 1000;
-    overflow-y: auto;
-    overflow-x: hidden;
+    background: rgba(0, 0, 0, 0.2); 
+    backdrop-filter: blur(0.5rem);     
+    -webkit-backdrop-filter: blur(0.5rem);
+  
+    justify-content: center;
+    align-items: center;
   }
   
   /* Modal content */
   .modal-content {
     position: relative;
-    max-height: 90vh;             /* prevents modal from exceeding viewport */
-    overflow-y: auto;             /* scroll inside modal if tall */
     background-color: #fff;
     border-radius: 0.5rem;
     padding: 1rem;
-    box-sizing: border-box;
-    margin: 1rem auto;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;     
-  }
   
+    max-width: 30rem;
+    width: 100%;
+
+  }
 
   .modal-content button {
     display: block;
-    width: 100%;
+    width: auto;
     margin: 0.625rem 0;
     padding: 0.625rem;
     cursor: pointer;
     font-size: 1.2rem;
+
+    transition: all 0.25s ease;
+
   }
+
   .modal-content h3 {
     text-align: center;
     font-weight: 600;
@@ -63,9 +61,11 @@ html{
     position: absolute;
     top: 0.938rem;
     right: 2.188rem;
-    font-size: 1.9rem;
-    color: #eae6e6;
+    font-size: 1.3rem;
+
     background-color: #070606;
+    color: #eae6e6;
+
     width: 2rem;
     height: 2rem;
 
@@ -74,6 +74,12 @@ html{
     align-items: center;
     border-radius: 50%;
     cursor: pointer;
+  }
+
+  .modal-content button:hover {
+    transform: translateY(-0.188); /* 👆 lift */
+    background: #555;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
   }
 
  .wrapper{
@@ -85,7 +91,7 @@ html{
  }
 
 .home-me-text-container{
-  top:20rem;
+  top: 20rem;
   display: grid;
   gap: 1rem;
   color: #FFFFFF;

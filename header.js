@@ -44,22 +44,18 @@ if (typeof window !== 'undefined') {
 }
 
 
-
-
 if (typeof document !== 'undefined') {
     const image = document.getElementById('personalImage');
-    let isUp = false;
+  
+    image.addEventListener('mouseenter', () => {
+      image.style.transform = 'translateY(-60px)';
+    });
+  
+    image.addEventListener('mouseleave', () => {
+      image.style.transform = 'translateY(0)';
+    });
+  }
 
-image.onclick = function() {
-    if (isUp) {
-        image.style.transform = 'translateY(0)';
-    } else {
-        image.style.transform = 'translateY(-60px)'; 
-    }
-    isUp = !isUp; 
-};
-
-}
 
 
 if (typeof document !== 'undefined') {

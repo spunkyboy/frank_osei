@@ -116,14 +116,25 @@
         <div class="contact-container">
             <h4 id="selectedResponse">Get in touch</h4>
         </div>
-         <form action="https://api.web3forms.com/submit" method="POST" autocomplete="off" class="contact-left">
-            <input type="hidden" name="access_key" value="7a073772-011f-4fe5-acb0-c3f11b742aba">
-            <input type="text" name="name" placeholder="Name" class="contact-input">
-            <input type="email" name="email" placeholder="example@hotmail.com" class="contact-input" required>
-            <textarea name="message" placeholder="Your Comments" class="contact-input" required></textarea>
-            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-            <button type="submit" class="contact-submit">Submit Form</button>
-        </form>
+        <form id="portfolioForm" class="contact-left">
+          <input type="text" id="name" placeholder="Name" class="contact-input">
+      
+          <input type="email"
+                 id="email"
+                 placeholder="example@hotmail.com"
+                 class="contact-input"
+                 required>
+      
+          <textarea id="message"
+                    placeholder="Your Comments"
+                    class="contact-input"
+                    required></textarea>
+      
+          <button type="submit" class="contact-submit">
+              Submit Form
+          </button>
+               <p id="formMessage"></p>
+      </form>
       </section>
 </main>
   <footer class="foot_items">
@@ -186,5 +197,6 @@
 
 
 <script src="header.js" defer></script>
+<script src="formScript.js" defer></script>
   </body>
 </html>

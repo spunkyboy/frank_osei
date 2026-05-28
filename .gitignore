@@ -1,0 +1,8 @@
+# Backend secrets
+backend/.env
+
+# Dependencies
+backend/node_modules
+
+# macOS
+.DS_Store

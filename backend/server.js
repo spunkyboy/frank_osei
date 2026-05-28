@@ -56,6 +56,25 @@ app.post("/contact", async (req, res) => {
     }
 });
 
+app.get("/messages", async (req, res) => {
+    try {
+        const messagesView = await Contact.find().sort({ createdAt: -1 });
+
+        res.status(200).json({
+            success: true,
+            count: messagesView.length,
+            data: messagesView
+        });
+
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            message: "Failed to fetch messages",
+            error: error.message
+        });
+    }
+});
+
 const PORT = 5003;
 
 app.listen(PORT, () => {

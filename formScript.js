@@ -31,7 +31,7 @@ form.addEventListener("submit", async (e) => {
         submitButton.disabled = true;
         submitButton.textContent = "Sending...";
 
-        const response = await fetch("http://localhost:5003/contact", {
+        const response = await fetch("https://personal-website-api-wii5.onrender.com/contact", {
 
             method: "POST",
 

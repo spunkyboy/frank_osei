@@ -1,19 +1,29 @@
 # Personal Portfolio Website
 
-This is my personal portfolio website, designed and developed to showcase my skills, interests, and projects as a Frontend Engineer. It serves as an introduction to who I am, the technologies I’ve learned, and the projects I’m currently developing.
+Overview
 
-# About the Project
+This is my personal portfolio website, designed and developed to showcase my skills, interests, and projects as a Frontend Engineer. The website serves as a central platform where visitors can learn more about me, explore my technical abilities, and view the projects I have created and continue to develop.
 
-This website is a single-page application that includes the following sections:
+About the Project
 
-Home: A brief introduction and overview of my work.
+The portfolio is built as a responsive single-page application and includes the following sections:
 
-About Me: Information about my background, skills, and engineering journey.
+## Home
 
-Contact: A contact form for users to reach out directly.
+A welcoming introduction that provides an overview of who I am and what I do as a Frontend Engineer.
 
-The main purpose of this website is to highlight my abilities in frontend development and demonstrate my understanding of clean, accessible, and responsive web design.
+## About Me
 
+A detailed section highlighting my background, technical skills, experience, and journey into software engineering.
+
+## Portfolio
+A detailed section modal that have selection of projects works
+
+## Contact
+
+A fully functional contact form that allows visitors to get in touch directly through the website.
+
+The primary goal of this project is to demonstrate my frontend development skills while showcasing best practices in responsive design, accessibility, and modern web development.
 # Design & Accessibility
 
 Color Scheme:
@@ -60,3 +70,7 @@ Functional contact form powered by Web3Forms
 Clean and semantic HTML structure
 
 Validated and accessible code
+
+# Purpose
+
+This project reflects my passion for frontend development and serves as a practical demonstration of my ability to create accessible, responsive, and user-focused web applications using modern web technologies.

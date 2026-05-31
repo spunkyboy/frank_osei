@@ -32,13 +32,22 @@ The website also passes color contrast tests with a ratio above 5.6, ensuring ac
 
 # Technologies Used
 
+Technologies Used
+Frontend
 HTML5
-
 CSS3
-
 JavaScript
+Responsive Web Design
+# Backend
+Node.js
+Express.js
+# Database
 
-Web3Forms (for handling contact form submissions)
+Development Tools
+ESLint
+Git
+GitHub
+Visual Studio Code
 
 # Features
 

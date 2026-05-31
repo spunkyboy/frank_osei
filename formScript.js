@@ -19,6 +19,15 @@ form.addEventListener("submit", async (e) => {
         return;
     }
 
+  
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailPattern.test(email)) {
+        formMessage.textContent = "Please enter a valid email address.";
+        formMessage.style.color = "red";
+        return;
+    }
+
     const formData = {
         name,
         email,

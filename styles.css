@@ -10,7 +10,17 @@ html{
     text-decoration: none;
   }
  
-  
+  .header-contact-msg{
+    margin: 0.625rem;
+    font-weight: 600;
+  }
+  .message-card {
+    border: 1px solid #333;
+    margin: 0.625rem;
+    padding: 0.625rem;
+    border-radius: 0.5rem;
+  }
+
   .modal {
     display: none; /* hidden by default */
     position: fixed;

@@ -1,102 +1,96 @@
-function toggleDropdown(){
-    const dropdown = document.getElementById("myDropdown");
+// ================= DROPDOWN =================
+const dropdown = document.getElementById("myDropdown");
+const button = document.getElementById("button_2");
+
+function toggleDropdown() {
     if (dropdown) dropdown.classList.toggle("show");
 }
 
-function selectResponse(response) {
-
-    const elementRes = document.getElementById("selectedResponse");
-    if (elementRes) elementRes.innerText = response;
-
-    closeDropdown();
-}
-
-function selectAbout(about) {
-
-    const elementAbout = document.getElementById("about");
-    if (elementAbout) elementAbout.innerText = about;
-
-    closeDropdown();
-}
-
-function selectHome(home) {
-
-    const elementHome = document.getElementById("home");
-    if (elementHome) elementHome.innerText = home.toUpperCase();
-
-    closeDropdown();
-}
-
 function closeDropdown() {
-    const dropdown = document.getElementById("myDropdown");
     if (dropdown) dropdown.classList.remove("show");
 }
 
 
+// const elementRes = document.getElementById("selectedResponse");
+// const elementAbout = document.getElementById("about");
+// const elementHome = document.getElementById("home");
+
+// function selectResponse(response) {
+//     if (elementRes) elementRes.innerText = response;
+//     closeDropdown();
+// }
+
+// function selectAbout(about) {
+//     if (elementAbout) elementAbout.innerText = about;
+//     closeDropdown();
+// }
+
+// function selectHome(home) {
+//     if (elementHome) elementHome.innerText = home.toUpperCase();
+//     closeDropdown();
+// }
 
 
-if (typeof window !== 'undefined') {
-    window.onclick = function(event) {
-        if (!event.target.matches('#button_2')) {
-            closeDropdown();
-        }
+button?.addEventListener("click", toggleDropdown);
+
+// close dropdown when clicking outside
+window.addEventListener("click", (event) => {
+    if (!event.target.closest(".dropdown")) {
+        closeDropdown();
     }
+});
+
+
+const image = document.getElementById("personalImage");
+
+if (image) {
+    image.addEventListener("mouseenter", () => {
+        image.style.transform = "translateY(-60px)";
+    });
+
+    image.addEventListener("mouseleave", () => {
+        image.style.transform = "translateY(0)";
+    });
 }
 
 
-if (typeof document !== 'undefined') {
-    const image = document.getElementById('personalImage');
-  
-    image.addEventListener('mouseenter', () => {
-      image.style.transform = 'translateY(-60px)';
-    });
-  
-    image.addEventListener('mouseleave', () => {
-      image.style.transform = 'translateY(0)';
-    });
-  }
-
-
-
-if (typeof document !== 'undefined') {
-    const element = document.getElementById('button_2');
-    
-    if (element) {
-
-        element.style.cursor = 'pointer'; 
-
-    }
+if (button) {
+    button.style.cursor = "pointer";
 
     function updateContent() {
-        if (!element) return;
-
-        if (window.matchMedia("(max-width: 734px)").matches) {
-            element.innerHTML = "&#x2630;";
+        if (window.innerWidth <= 734) {
+            button.innerHTML = "&#x2630;";
         } else {
-            element.innerHTML = '<span style="font-weight:bold;">FRANK</span>';
+            button.innerHTML = '<span style="font-weight:bold;">FRANK</span>';
         }
     }
 
     updateContent();
-    window.addEventListener('resize', updateContent);
+    window.addEventListener("resize", updateContent);
 }
 
 
 const modal = document.getElementById("portfolioModal");
 const closeBtn = document.getElementById("closeModal");
 
-function myPortfolios() {
-    modal.style.display = "flex";
+const portfolioLink = document.getElementById("portfolioLink");
 
-    // optional: close dropdown when opening modal
+portfolioLink?.addEventListener("click", (e) => {
+    e.preventDefault();
+    myPortfolios();
+});
+
+function myPortfolios() {
+    if (!modal) return;
+    modal.style.display = "flex";
     closeDropdown();
 }
 
-// close modal
-closeBtn.onclick = () => modal.style.display = "none";
+closeBtn?.addEventListener("click", () => {
+    if (modal) modal.style.display = "none";
+});
 
-// handle button clicks (clean + scalable)
-modal.addEventListener("click", (e) => {
+modal?.addEventListener("click", (e) => {
     const link = e.target.dataset.link;
 
     if (link) {
@@ -105,10 +99,11 @@ modal.addEventListener("click", (e) => {
     }
 });
 
-// click outside closes modal
 window.addEventListener("click", (e) => {
     if (e.target === modal) {
         modal.style.display = "none";
     }
 });
+
+
 

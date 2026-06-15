@@ -26,6 +26,7 @@ const image = document.getElementById("personalImage");
 if (image) {
     image.addEventListener("mouseenter", () => {
         image.style.transform = "translateY(-60px)";
+        
     });
 
     image.addEventListener("mouseleave", () => {
@@ -36,7 +37,7 @@ if (image) {
 
 if (button) {
     button.style.cursor = "pointer";
-
+   
     function updateContent() {
         if (window.innerWidth <= 734) {
             button.innerHTML = "&#x2630;";

@@ -11,30 +11,10 @@ function closeDropdown() {
 }
 
 
-// const elementRes = document.getElementById("selectedResponse");
-// const elementAbout = document.getElementById("about");
-// const elementHome = document.getElementById("home");
-
-// function selectResponse(response) {
-//     if (elementRes) elementRes.innerText = response;
-//     closeDropdown();
-// }
-
-// function selectAbout(about) {
-//     if (elementAbout) elementAbout.innerText = about;
-//     closeDropdown();
-// }
-
-// function selectHome(home) {
-//     if (elementHome) elementHome.innerText = home.toUpperCase();
-//     closeDropdown();
-// }
-
-
 button?.addEventListener("click", toggleDropdown);
 
 // close dropdown when clicking outside
-window.addEventListener("click", (event) => {
+window.addEventListener("pointerdown", (event) => {
     if (!event.target.closest(".dropdown")) {
         closeDropdown();
     }

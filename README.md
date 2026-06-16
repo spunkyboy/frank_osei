@@ -55,7 +55,7 @@ Technologies Used
 - Node.js
 - Express.js
 ### Database
-
+- MongoDB
 ### Development Tools
 - ESLint
 - Git
